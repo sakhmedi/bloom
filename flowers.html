@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Species - Bloom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <p class="loading-logo">Bloom</p>
+    <div class="loading-bar">
+      <div class="loading-bar-inner"></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Bloom</h1>
+      <nav>
+        <a href="flowers.html" class="active">SPECIES</a>
+        <a href="#">ABOUT</a>
+        <a href="#">BLOG</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Swipeable Carousel -->
+  <div class="carousel-wrapper" id="carousel">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="carousel-slide">
+        <div class="slide-content">
+          <p class="species-label">Family 1 of 5</p>
+          <h2>Rosaceae</h2>
+          <p class="slide-desc">The rose family, known for its ornamental and fragrant flowering plants. Home to roses, which have been cultivated for over 5,000 years.</p>
+          <a href="pages/species/rosaceae.html" class="btn-outline">VIEW DETAIL</a>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="slide-content">
+          <p class="species-label">Family 2 of 5</p>
+          <h2>Asteraceae</h2>
+          <p class="slide-desc">The daisy family, one of the largest families of flowering plants with over 32,000 species including the beloved daisy.</p>
+          <a href="pages/species/asteraceae.html" class="btn-outline">VIEW DETAIL</a>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="slide-content">
+          <p class="species-label">Family 3 of 5</p>
+          <h2>Lamiaceae</h2>
+          <p class="slide-desc">The mint family, prized for aromatic herbs and flowering plants. Lavender, a beloved member, has been cultivated since ancient Egyptian times.</p>
+          <a href="pages/species/lamiaceae.html" class="btn-outline">VIEW DETAIL</a>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="slide-content">
+          <p class="species-label">Family 4 of 5</p>
+          <h2>Liliaceae</h2>
+          <p class="slide-desc">The lily family, featuring elegant bulbous flowering plants. Tulips from this family once caused "Tulip Mania" in the 1630s Netherlands.</p>
+          <a href="pages/species/liliaceae.html" class="btn-outline">VIEW DETAIL</a>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="slide-content">
+          <p class="species-label">Family 5 of 5</p>
+          <h2>Orchidaceae</h2>
+          <p class="slide-desc">The orchid family, one of the most diverse plant families on Earth with over 25,000 species found in nearly every habitat.</p>
+          <a href="pages/species/orchidaceae.html" class="btn-outline">VIEW DETAIL</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Dot Indicators -->
+  <div class="carousel-indicators" id="indicators"></div>
+  <p class="swipe-hint">Swipe to explore</p>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Bloom &mdash; A flower learning project</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/carousel.js"></script>
+
+</body>
+</html>
