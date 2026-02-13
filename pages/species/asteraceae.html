@@ -21,32 +21,40 @@
     </div>
   </header>
 
-  <main>
+  <main data-family="asteraceae">
     <div class="flower-detail">
 
       <div class="flower-detail-left">
         <div class="flower-entry">
           <p class="species-label">Asteraceae</p>
-          <h2>Daisy</h2>
-          <p class="description">Found on every continent except Antarctica. Their name comes from "day's eye" because petals open at dawn and close at dusk.</p>
+          <h2 id="flower-name">Daisy</h2>
+          <p class="description" id="flower-desc">Found on every continent except Antarctica. Their name comes from "day's eye" because petals open at dawn and close at dusk.</p>
           <div class="flower-meta">
-            <p>Origin: <span>Europe</span></p>
+            <p>Origin: <span id="flower-origin">Europe</span></p>
             <p>Family: <span>Asteraceae</span></p>
           </div>
         </div>
+        <ul class="flower-selector" id="flowerSelector"></ul>
       </div>
 
       <div class="flower-detail-center">
-        <img src="../../assets/images/flowers/daisy.png" alt="Daisy">
+        <img id="flower-image" src="../../assets/images/flowers/daisy.png" alt="Daisy">
       </div>
 
       <div class="flower-detail-right">
-        <h3>Observe the beauty of Lamiaceae family</h3>
-        <p class="fact">The Lamiaceae family, commonly known as the mint family, includes many aromatic herbs. Plants in this family have square stems and opposite leaves, used in medicine and cooking for thousands of years.</p>
-        <a href="lamiaceae.html" class="btn-outline">VIEW DETAIL</a>
+        <p class="preview-label">Next in this family</p>
+        <h3 id="preview-name"></h3>
+        <p class="fact" id="preview-desc"></p>
+        <div class="detail-buttons">
+          <button class="btn-outline" id="nextFlowerBtn">NEXT FLOWER</button>
+          <a class="btn-outline" id="nextSpeciesBtn" href="#">NEXT SPECIES</a>
+        </div>
       </div>
 
     </div>
   </main>
+
+  <script src="../../assets/js/flower-data.js"></script>
+  <script src="../../assets/js/flower-detail.js"></script>
 </body>
 </html>

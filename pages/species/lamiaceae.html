@@ -21,32 +21,40 @@
     </div>
   </header>
 
-  <main>
+  <main data-family="lamiaceae">
     <div class="flower-detail">
 
       <div class="flower-detail-left">
         <div class="flower-entry">
           <p class="species-label">Lamiaceae</p>
-          <h2>Lavender</h2>
-          <p class="description">Lavender is a flowering plant in the mint family. Its essential oil is widely used in aromatherapy, and it has been cultivated since ancient Egyptian times.</p>
+          <h2 id="flower-name">Lavender</h2>
+          <p class="description" id="flower-desc">Lavender is a flowering plant in the mint family. Its essential oil is widely used in aromatherapy, and it has been cultivated since ancient Egyptian times.</p>
           <div class="flower-meta">
-            <p>Origin: <span>Mediterranean region</span></p>
+            <p>Origin: <span id="flower-origin">Mediterranean region</span></p>
             <p>Family: <span>Lamiaceae</span></p>
           </div>
         </div>
+        <ul class="flower-selector" id="flowerSelector"></ul>
       </div>
 
       <div class="flower-detail-center">
-        <img src="../../assets/images/flowers/lavender.png" alt="Lavender">
+        <img id="flower-image" src="../../assets/images/flowers/lavender.png" alt="Lavender">
       </div>
 
       <div class="flower-detail-right">
-        <h3>Observe the beauty of Liliaceae family</h3>
-        <p class="fact">The Liliaceae family includes some of the most popular garden flowers in the world. Tulips from this family once caused "Tulip Mania" in the 1630s Netherlands, where single bulbs sold for more than a house.</p>
-        <a href="liliaceae.html" class="btn-outline">VIEW DETAIL</a>
+        <p class="preview-label">Next in this family</p>
+        <h3 id="preview-name"></h3>
+        <p class="fact" id="preview-desc"></p>
+        <div class="detail-buttons">
+          <button class="btn-outline" id="nextFlowerBtn">NEXT FLOWER</button>
+          <a class="btn-outline" id="nextSpeciesBtn" href="#">NEXT SPECIES</a>
+        </div>
       </div>
 
     </div>
   </main>
+
+  <script src="../../assets/js/flower-data.js"></script>
+  <script src="../../assets/js/flower-detail.js"></script>
 </body>
 </html>

@@ -485,6 +485,60 @@ body.no-scroll {
   color: #ffffff;
 }
 
+.detail-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* ===== Flower Selector ===== */
+.flower-selector {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.flower-selector-item {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  padding: 0.3rem 0 0.3rem 0.75rem;
+  border-left: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.flower-selector-item:hover {
+  color: var(--color-text);
+}
+
+.flower-selector-item.active {
+  color: var(--color-text);
+  border-left-color: var(--color-text);
+}
+
+/* ===== Preview Label ===== */
+.preview-label {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--color-text-light);
+  margin-bottom: 0.75rem;
+  opacity: 0.6;
+}
+
+/* ===== Fade Transition ===== */
+.flower-detail-center,
+.flower-entry {
+  transition: opacity 0.25s ease;
+}
+
+.flower-detail-center.fade-out,
+.flower-entry.fade-out {
+  opacity: 0;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .hero h2 {
@@ -514,5 +568,23 @@ body.no-scroll {
   body.no-scroll {
     overflow: auto;
     height: auto;
+  }
+
+  .flower-selector {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .flower-selector-item {
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.25rem;
+  }
+
+  .flower-selector-item.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--color-text);
   }
 }

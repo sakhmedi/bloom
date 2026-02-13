@@ -21,32 +21,40 @@
     </div>
   </header>
 
-  <main>
+  <main data-family="liliaceae">
     <div class="flower-detail">
 
       <div class="flower-detail-left">
         <div class="flower-entry">
           <p class="species-label">Liliaceae</p>
-          <h2>Tulip</h2>
-          <p class="description">Tulips originated in Central Asia and became wildly popular in the Netherlands during the 1600s, sparking "Tulip Mania" — one of history's first economic bubbles.</p>
+          <h2 id="flower-name">Tulip</h2>
+          <p class="description" id="flower-desc">Tulips originated in Central Asia and became wildly popular in the Netherlands during the 1600s, sparking "Tulip Mania" — one of history's first economic bubbles.</p>
           <div class="flower-meta">
-            <p>Origin: <span>Central Asia</span></p>
+            <p>Origin: <span id="flower-origin">Central Asia</span></p>
             <p>Family: <span>Liliaceae</span></p>
           </div>
         </div>
+        <ul class="flower-selector" id="flowerSelector"></ul>
       </div>
 
       <div class="flower-detail-center">
-        <img src="../../assets/images/flowers/tulip.png" alt="Tulip">
+        <img id="flower-image" src="../../assets/images/flowers/tulip.png" alt="Tulip">
       </div>
 
       <div class="flower-detail-right">
-        <h3>Observe the beauty of Orchidaceae family</h3>
-        <p class="fact">The Orchidaceae family is one of the two largest families of flowering plants, with over 28,000 accepted species. Some orchids can live for over 100 years, and their seeds are the smallest of any flowering plant.</p>
-        <a href="orchidaceae.html" class="btn-outline">VIEW DETAIL</a>
+        <p class="preview-label">Next in this family</p>
+        <h3 id="preview-name"></h3>
+        <p class="fact" id="preview-desc"></p>
+        <div class="detail-buttons">
+          <button class="btn-outline" id="nextFlowerBtn">NEXT FLOWER</button>
+          <a class="btn-outline" id="nextSpeciesBtn" href="#">NEXT SPECIES</a>
+        </div>
       </div>
 
     </div>
   </main>
+
+  <script src="../../assets/js/flower-data.js"></script>
+  <script src="../../assets/js/flower-detail.js"></script>
 </body>
 </html>

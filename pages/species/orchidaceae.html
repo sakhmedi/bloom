@@ -21,32 +21,40 @@
     </div>
   </header>
 
-  <main>
+  <main data-family="orchidaceae">
     <div class="flower-detail">
 
       <div class="flower-detail-left">
         <div class="flower-entry">
           <p class="species-label">Orchidaceae</p>
-          <h2>Orchid</h2>
-          <p class="description">Orchids are one of the largest flowering plant families with over 25,000 species. They can be found in nearly every habitat on Earth.</p>
+          <h2 id="flower-name">Orchid</h2>
+          <p class="description" id="flower-desc">Orchids are one of the largest flowering plant families with over 25,000 species. They can be found in nearly every habitat on Earth.</p>
           <div class="flower-meta">
-            <p>Origin: <span>Tropical regions worldwide</span></p>
+            <p>Origin: <span id="flower-origin">Tropical regions worldwide</span></p>
             <p>Family: <span>Orchidaceae</span></p>
           </div>
         </div>
+        <ul class="flower-selector" id="flowerSelector"></ul>
       </div>
 
       <div class="flower-detail-center">
-        <img src="../../assets/images/flowers/orchid.png" alt="Orchid">
+        <img id="flower-image" src="../../assets/images/flowers/orchid.png" alt="Orchid">
       </div>
 
       <div class="flower-detail-right">
-        <h3>Observe the beauty of Rosaceae family</h3>
-        <p class="fact">The Rosaceae family includes not only roses but also many fruit-bearing plants like apples, cherries, and strawberries. Roses have been cultivated for over 5,000 years with more than 30,000 varieties worldwide.</p>
-        <a href="rosaceae.html" class="btn-outline">VIEW DETAIL</a>
+        <p class="preview-label">Next in this family</p>
+        <h3 id="preview-name"></h3>
+        <p class="fact" id="preview-desc"></p>
+        <div class="detail-buttons">
+          <button class="btn-outline" id="nextFlowerBtn">NEXT FLOWER</button>
+          <a class="btn-outline" id="nextSpeciesBtn" href="#">NEXT SPECIES</a>
+        </div>
       </div>
 
     </div>
   </main>
+
+  <script src="../../assets/js/flower-data.js"></script>
+  <script src="../../assets/js/flower-detail.js"></script>
 </body>
 </html>

@@ -21,32 +21,40 @@
     </div>
   </header>
 
-  <main>
+  <main data-family="rosaceae">
     <div class="flower-detail">
 
       <div class="flower-detail-left">
         <div class="flower-entry">
           <p class="species-label">Rosaceae</p>
-          <h2>Rose</h2>
-          <p class="description">Roses are woody perennial plants prized for their beauty and fragrance. They have been cultivated for over 5,000 years and symbolize love across many cultures.</p>
+          <h2 id="flower-name">Rose</h2>
+          <p class="description" id="flower-desc">Roses are woody perennial plants prized for their beauty and fragrance. They have been cultivated for over 5,000 years and symbolize love across many cultures.</p>
           <div class="flower-meta">
-            <p>Origin: <span>Central Asia</span></p>
+            <p>Origin: <span id="flower-origin">Central Asia</span></p>
             <p>Family: <span>Rosaceae</span></p>
           </div>
         </div>
+        <ul class="flower-selector" id="flowerSelector"></ul>
       </div>
 
       <div class="flower-detail-center">
-        <img src="../../assets/images/flowers/rose.png" alt="Rose">
+        <img id="flower-image" src="../../assets/images/flowers/rose.png" alt="Rose">
       </div>
 
       <div class="flower-detail-right">
-        <h3>Observe the beauty of Asteraceae family</h3>
-        <p class="fact">The Asteraceae family is one of the largest flowering plant families, with over 32,000 species. Their flower heads are actually composed of hundreds of tiny individual flowers called florets.</p>
-        <a href="asteraceae.html" class="btn-outline">VIEW DETAIL</a>
+        <p class="preview-label">Next in this family</p>
+        <h3 id="preview-name"></h3>
+        <p class="fact" id="preview-desc"></p>
+        <div class="detail-buttons">
+          <button class="btn-outline" id="nextFlowerBtn">NEXT FLOWER</button>
+          <a class="btn-outline" id="nextSpeciesBtn" href="#">NEXT SPECIES</a>
+        </div>
       </div>
 
     </div>
   </main>
+
+  <script src="../../assets/js/flower-data.js"></script>
+  <script src="../../assets/js/flower-detail.js"></script>
 </body>
 </html>
