@@ -10,7 +10,7 @@ var FLOWER_DATA = {
       },
       {
         name: "Cherry Blossom",
-        image: "../../assets/images/flowers/cherry-blossom.png",
+        image: "../../assets/images/flowers/cherry_blossom.png",
         description: "Cherry blossoms are iconic spring flowers celebrated in Japan during hanami. They bloom for only one to two weeks, symbolizing the fleeting nature of life.",
         origin: "Japan"
       },
@@ -102,7 +102,7 @@ var FLOWER_DATA = {
       },
       {
         name: "Vanilla Orchid",
-        image: "../../assets/images/flowers/vanilla-orchid.png",
+        image: "../../assets/images/flowers/vanilla_orchid.png",
         description: "The vanilla orchid is the only orchid that produces an edible fruit. Each flower opens for just one day and must be hand-pollinated within hours to produce a vanilla bean.",
         origin: "Mexico"
       },

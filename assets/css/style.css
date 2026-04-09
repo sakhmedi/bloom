@@ -539,6 +539,16 @@ body.no-scroll {
   opacity: 0;
 }
 
+/* ===== Tall Flowers (roots at bottom) ===== */
+body.tall-flowers .flower-detail-center {
+  align-self: stretch;
+  align-items: flex-end;
+}
+
+body.tall-flowers .flower-detail-center img {
+  object-position: bottom;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .hero h2 {
