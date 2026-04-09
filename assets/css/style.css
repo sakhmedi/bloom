@@ -395,7 +395,7 @@ body.no-scroll {
   gap: 2rem;
   height: calc(100vh - 64px);
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 6rem;
 }
 
 .flower-detail-left {
@@ -413,14 +413,14 @@ body.no-scroll {
 }
 
 .flower-entry h2 {
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 400;
   margin-bottom: 0.75rem;
 }
 
 .flower-entry .description {
   color: var(--color-text-light);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -454,7 +454,7 @@ body.no-scroll {
 }
 
 .flower-detail-right h3 {
-  font-size: 1.3rem;
+  font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 1.25rem;
@@ -462,7 +462,7 @@ body.no-scroll {
 
 .flower-detail-right .fact {
   color: var(--color-text-light);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -472,6 +472,7 @@ body.no-scroll {
   background: #333333;
   border: none;
   color: #ffffff;
+  font-family: inherit;
   font-weight: 400;
   font-size: 0.85rem;
   letter-spacing: 0.1em;
@@ -488,6 +489,13 @@ body.no-scroll {
 .detail-buttons {
   display: flex;
   gap: 0.75rem;
+  flex-wrap: nowrap;
+}
+
+.detail-buttons .btn-outline {
+  font-size: 0.85rem;
+  padding: 0.75rem 1.25rem;
+  white-space: nowrap;
 }
 
 /* ===== Flower Selector ===== */
@@ -540,6 +548,15 @@ body.no-scroll {
 }
 
 /* ===== Tall Flowers (roots at bottom) ===== */
+body.top-flowers .flower-detail-center {
+  align-self: stretch;
+  align-items: flex-start;
+}
+
+body.top-flowers .flower-detail-center img {
+  object-position: top;
+}
+
 body.tall-flowers .flower-detail-center {
   align-self: stretch;
   align-items: flex-end;

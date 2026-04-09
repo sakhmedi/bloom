@@ -15,10 +15,10 @@ var FLOWER_DATA = {
         origin: "Japan"
       },
       {
-        name: "Strawberry Flower",
-        image: "../../assets/images/flowers/strawberry-flower.png",
-        description: "The delicate white flowers of the strawberry plant each produce a single fruit. Wild strawberries have been gathered since the Roman era, though cultivation began in 18th-century France.",
-        origin: "Europe & Americas"
+        name: "Apple Blossom",
+        image: "../../assets/images/flowers/apple_blossom.png",
+        description: "Apple blossoms appear each spring in clusters of white and pale pink, filling orchards with a sweet fragrance. They are the state flower of Michigan and Arkansas, and each bloom must be pollinated to produce a fruit.",
+        origin: "Central Asia"
       }
     ]
   },
