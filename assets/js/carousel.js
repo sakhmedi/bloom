@@ -2,20 +2,20 @@
 window.addEventListener('load', function () {
   setTimeout(function () {
     document.getElementById('loadingScreen').classList.add('hidden');
-  }, 2000);
+  }, 800);
 });
 
 // Carousel
-var track = document.getElementById('carouselTrack');
-var wrapper = document.getElementById('carousel');
-var slides = track.querySelectorAll('.carousel-slide');
-var totalSlides = slides.length;
-var currentIndex = 0;
+const track = document.getElementById('carouselTrack');
+const wrapper = document.getElementById('carousel');
+const slides = track.querySelectorAll('.carousel-slide');
+const totalSlides = slides.length;
+let currentIndex = 0;
 
 // Build dot indicators
-var indicatorsEl = document.getElementById('indicators');
-for (var i = 0; i < totalSlides; i++) {
-  var dot = document.createElement('button');
+const indicatorsEl = document.getElementById('indicators');
+for (let i = 0; i < totalSlides; i++) {
+  const dot = document.createElement('button');
   dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
   dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
   dot.dataset.index = i;
@@ -26,8 +26,8 @@ for (var i = 0; i < totalSlides; i++) {
 }
 
 function updateDots() {
-  var dots = indicatorsEl.querySelectorAll('.carousel-dot');
-  for (var i = 0; i < dots.length; i++) {
+  const dots = indicatorsEl.querySelectorAll('.carousel-dot');
+  for (let i = 0; i < dots.length; i++) {
     dots[i].classList.toggle('active', i === currentIndex);
   }
 }
@@ -42,10 +42,10 @@ function goToSlide(index) {
 }
 
 // Touch / pointer swipe
-var startX = 0;
-var currentX = 0;
-var isDragging = false;
-var threshold = 50;
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+const threshold = 50;
 
 wrapper.addEventListener('pointerdown', function (e) {
   if (e.target.closest('a')) return; // don't interfere with link clicks
@@ -59,8 +59,8 @@ wrapper.addEventListener('pointerdown', function (e) {
 wrapper.addEventListener('pointermove', function (e) {
   if (!isDragging) return;
   currentX = e.clientX;
-  var diff = currentX - startX;
-  var offset = -(currentIndex * wrapper.offsetWidth) + diff;
+  const diff = currentX - startX;
+  const offset = -(currentIndex * wrapper.offsetWidth) + diff;
   track.style.transform = 'translateX(' + offset + 'px)';
 });
 
@@ -68,7 +68,7 @@ wrapper.addEventListener('pointerup', function (e) {
   if (!isDragging) return;
   isDragging = false;
   track.classList.remove('dragging');
-  var diff = currentX - startX;
+  const diff = currentX - startX;
   if (diff < -threshold) {
     goToSlide(currentIndex + 1);
   } else if (diff > threshold) {

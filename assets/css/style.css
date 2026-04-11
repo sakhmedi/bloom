@@ -92,6 +92,11 @@ a:hover {
   color: var(--color-primary);
 }
 
+.logo a {
+  color: var(--color-primary);
+  font-weight: inherit;
+}
+
 nav {
   display: flex;
   gap: 1.5rem;
@@ -577,6 +582,25 @@ body.tall-flowers .flower-detail-center {
 
 body.tall-flowers .flower-detail-center img {
   object-position: bottom;
+}
+
+/* ===== Focus Styles ===== */
+a:focus-visible,
+button:focus-visible,
+.carousel-dot:focus-visible,
+.flower-selector-item:focus-visible,
+.btn:focus-visible,
+.btn-outline:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+/* ===== Tablet Breakpoint ===== */
+@media (max-width: 900px) {
+  .flower-detail {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 2rem;
+  }
 }
 
 /* ===== Responsive ===== */

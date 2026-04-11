@@ -1,4 +1,4 @@
-var FLOWER_DATA = {
+const FLOWER_DATA = {
   rosaceae: {
     family: "Rosaceae",
     flowers: [

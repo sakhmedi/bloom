@@ -1,28 +1,36 @@
 (function () {
-  var familyKey = document.querySelector("main").dataset.family;
-  var familyData = FLOWER_DATA[familyKey];
+  const familyKey = document.querySelector("main").dataset.family;
+  const familyData = FLOWER_DATA[familyKey];
   if (!familyData) return;
 
-  var flowers = familyData.flowers;
-  var currentIndex = 0;
+  const flowers = familyData.flowers;
+  let currentIndex = 0;
 
-  var nameEl = document.getElementById("flower-name");
-  var descEl = document.getElementById("flower-desc");
-  var originEl = document.getElementById("flower-origin");
-  var imageEl = document.getElementById("flower-image");
-  var selectorEl = document.getElementById("flowerSelector");
-  var previewNameEl = document.getElementById("preview-name");
-  var previewDescEl = document.getElementById("preview-desc");
-  var nextBtn = document.getElementById("nextFlowerBtn");
+  const nameEl = document.getElementById("flower-name");
+  const descEl = document.getElementById("flower-desc");
+  const originEl = document.getElementById("flower-origin");
+  const imageEl = document.getElementById("flower-image");
+  const selectorEl = document.getElementById("flowerSelector");
+  const previewNameEl = document.getElementById("preview-name");
+  const previewDescEl = document.getElementById("preview-desc");
+  const nextBtn = document.getElementById("nextFlowerBtn");
 
   // Build selector list
   flowers.forEach(function (flower, i) {
-    var li = document.createElement("li");
+    const li = document.createElement("li");
     li.className = "flower-selector-item" + (i === 0 ? " active" : "");
     li.textContent = flower.name;
     li.dataset.index = i;
+    li.setAttribute("tabindex", "0");
+    li.setAttribute("role", "button");
     li.addEventListener("click", function () {
       switchFlower(parseInt(this.dataset.index));
+    });
+    li.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        switchFlower(parseInt(this.dataset.index));
+      }
     });
     selectorEl.appendChild(li);
   });
@@ -34,7 +42,7 @@
 
   // Preload images
   flowers.forEach(function (flower) {
-    var img = new Image();
+    const img = new Image();
     img.src = flower.image;
   });
 
@@ -42,14 +50,14 @@
     if (index === currentIndex) return;
     currentIndex = index;
 
-    var centerEl = document.querySelector(".flower-detail-center");
-    var entryEl = document.querySelector(".flower-entry");
+    const centerEl = document.querySelector(".flower-detail-center");
+    const entryEl = document.querySelector(".flower-entry");
 
     centerEl.classList.add("fade-out");
     entryEl.classList.add("fade-out");
 
     setTimeout(function () {
-      var flower = flowers[index];
+      const flower = flowers[index];
 
       nameEl.textContent = flower.name;
       descEl.textContent = flower.description;
@@ -58,14 +66,14 @@
       imageEl.alt = flower.name;
 
       // Update selector
-      var items = selectorEl.querySelectorAll(".flower-selector-item");
+      const items = selectorEl.querySelectorAll(".flower-selector-item");
       items.forEach(function (item) {
         item.classList.toggle("active", parseInt(item.dataset.index) === index);
       });
 
       // Update preview (next flower)
-      var nextIndex = (index + 1) % flowers.length;
-      var nextFlower = flowers[nextIndex];
+      const nextIndex = (index + 1) % flowers.length;
+      const nextFlower = flowers[nextIndex];
       previewNameEl.textContent = nextFlower.name;
       previewDescEl.textContent = nextFlower.description;
 
@@ -81,10 +89,10 @@
   }
 
   // Next species button
-  var familyOrder = ["rosaceae", "asteraceae", "lamiaceae", "liliaceae", "orchidaceae"];
-  var currentFamilyIndex = familyOrder.indexOf(familyKey);
-  var nextFamilyKey = familyOrder[(currentFamilyIndex + 1) % familyOrder.length];
-  var nextSpeciesBtn = document.getElementById("nextSpeciesBtn");
+  const familyOrder = ["rosaceae", "asteraceae", "lamiaceae", "liliaceae", "orchidaceae"];
+  const currentFamilyIndex = familyOrder.indexOf(familyKey);
+  const nextFamilyKey = familyOrder[(currentFamilyIndex + 1) % familyOrder.length];
+  const nextSpeciesBtn = document.getElementById("nextSpeciesBtn");
   if (nextSpeciesBtn) {
     nextSpeciesBtn.href = nextFamilyKey + ".html";
   }
