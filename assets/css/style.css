@@ -397,6 +397,7 @@ body.no-scroll {
 .flower-detail {
   display: grid;
   grid-template-columns: 1fr 650px 1fr;
+  grid-template-rows: minmax(0, 1fr);
   gap: 2rem;
   height: calc(100vh - 64px);
   align-items: center;
@@ -425,6 +426,7 @@ body.no-scroll {
   font-weight: 400;
   margin-bottom: 0.75rem;
   min-height: 4rem;
+  hyphens: auto;
 }
 
 .flower-entry .description {
@@ -479,7 +481,8 @@ body.no-scroll {
   font-size: 0.75rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  min-height: 8rem;
+  height: 8rem;
+  overflow: hidden;
 }
 
 .btn-outline {
