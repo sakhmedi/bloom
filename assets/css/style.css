@@ -470,7 +470,8 @@ body.no-scroll {
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 1.25rem;
-  min-height: 2.5rem;
+  height: 3rem;
+  overflow: hidden;
 }
 
 .flower-detail-right .fact {
@@ -502,13 +503,15 @@ body.no-scroll {
 
 .detail-buttons {
   display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
 }
 
 .detail-buttons .btn-outline {
-  font-size: 0.85rem;
-  padding: 0.75rem 1.25rem;
+  flex: 1;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 0.65rem 0.5rem;
   white-space: nowrap;
 }
 
