@@ -5,6 +5,7 @@
 
   const flowers = familyData.flowers;
   let currentIndex = 0;
+  let switchTimeout = null;
 
   const nameEl = document.getElementById("flower-name");
   const descEl = document.getElementById("flower-desc");
@@ -56,8 +57,9 @@
     centerEl.classList.add("fade-out");
     entryEl.classList.add("fade-out");
 
-    setTimeout(function () {
-      const flower = flowers[index];
+    clearTimeout(switchTimeout);
+    switchTimeout = setTimeout(function () {
+      const flower = flowers[currentIndex];
 
       nameEl.textContent = flower.name;
       descEl.textContent = flower.description;
@@ -68,11 +70,11 @@
       // Update selector
       const items = selectorEl.querySelectorAll(".flower-selector-item");
       items.forEach(function (item) {
-        item.classList.toggle("active", parseInt(item.dataset.index) === index);
+        item.classList.toggle("active", parseInt(item.dataset.index) === currentIndex);
       });
 
       // Update preview (next flower)
-      const nextIndex = (index + 1) % flowers.length;
+      const nextIndex = (currentIndex + 1) % flowers.length;
       const nextFlower = flowers[nextIndex];
       previewNameEl.textContent = nextFlower.name;
       previewDescEl.textContent = nextFlower.description;
@@ -94,6 +96,17 @@
   const nextFamilyKey = familyOrder[(currentFamilyIndex + 1) % familyOrder.length];
   const nextSpeciesBtn = document.getElementById("nextSpeciesBtn");
   if (nextSpeciesBtn) {
-    nextSpeciesBtn.href = nextFamilyKey + ".html";
+    const nextSpeciesUrl = nextFamilyKey + ".html";
+    nextSpeciesBtn.href = nextSpeciesUrl;
+    nextSpeciesBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const centerEl = document.querySelector(".flower-detail-center");
+      const entryEl = document.querySelector(".flower-entry");
+      centerEl.classList.add("fade-out");
+      entryEl.classList.add("fade-out");
+      setTimeout(function () {
+        window.location.href = nextSpeciesUrl;
+      }, 250);
+    });
   }
 })();

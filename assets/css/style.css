@@ -181,7 +181,7 @@ nav a.active {
 }
 
 .card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.07);
 }
 
 .card-img {
@@ -286,12 +286,12 @@ nav a.active {
   width: 0%;
   height: 100%;
   background: var(--color-text);
-  animation: loadProgress 1.8s ease-in-out forwards;
+  animation: loadProgress 0.8s ease-in-out forwards;
 }
 
 @keyframes loadProgress {
   0% { width: 0%; }
-  60% { width: 70%; }
+  70% { width: 85%; }
   100% { width: 100%; }
 }
 
@@ -424,8 +424,7 @@ body.no-scroll {
   font-size: 3rem;
   font-weight: 400;
   margin-bottom: 0.75rem;
-  height: 4rem;
-  overflow: hidden;
+  min-height: 4rem;
 }
 
 .flower-entry .description {
@@ -433,8 +432,7 @@ body.no-scroll {
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 0.25rem;
-  height: 12rem;
-  overflow: hidden;
+  min-height: 12rem;
 }
 
 .flower-meta {
@@ -472,8 +470,7 @@ body.no-scroll {
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 1.25rem;
-  height: 2.5rem;
-  overflow: hidden;
+  min-height: 2.5rem;
 }
 
 .flower-detail-right .fact {
@@ -481,8 +478,7 @@ body.no-scroll {
   font-size: 0.75rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  height: 8rem;
-  overflow: hidden;
+  min-height: 8rem;
 }
 
 .btn-outline {
@@ -507,7 +503,7 @@ body.no-scroll {
 .detail-buttons {
   display: flex;
   gap: 0.75rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .detail-buttons .btn-outline {
