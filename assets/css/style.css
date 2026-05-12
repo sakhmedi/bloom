@@ -402,6 +402,7 @@ body.no-scroll {
   height: calc(100vh - 64px);
   align-items: center;
   padding: 0 6rem;
+  position: relative;
 }
 
 .flower-detail-left {
@@ -425,7 +426,8 @@ body.no-scroll {
   font-size: 3rem;
   font-weight: 400;
   margin-bottom: 0.75rem;
-  min-height: 4rem;
+  height: 7.5rem;
+  overflow: hidden;
   hyphens: auto;
 }
 
@@ -434,7 +436,8 @@ body.no-scroll {
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 0.25rem;
-  min-height: 12rem;
+  height: 15rem;
+  overflow: hidden;
 }
 
 .flower-meta {
@@ -460,10 +463,14 @@ body.no-scroll {
   display: block;
 }
 .flower-detail-right {
+  position: absolute;
+  top: 0;
+  right: 6rem;
+  width: calc((100% - 16rem - 650px) / 2);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-self: stretch;
   padding-top: 20vh;
 }
 
@@ -602,6 +609,14 @@ button:focus-visible,
   .flower-detail {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 2rem;
+  }
+
+  .flower-detail-right {
+    position: static;
+    width: auto;
+    height: auto;
+    right: auto;
+    top: auto;
   }
 }
 
