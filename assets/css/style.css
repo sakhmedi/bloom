@@ -410,7 +410,7 @@ body.no-scroll {
   flex-direction: column;
   gap: 2rem;
   align-self: stretch;
-  padding-top: 12vh;
+  padding-top: 8vh;
   padding-bottom: 3rem;
 }
 
@@ -436,7 +436,7 @@ body.no-scroll {
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 0.25rem;
-  height: 15rem;
+  height: 10rem;
   overflow: hidden;
 }
 
